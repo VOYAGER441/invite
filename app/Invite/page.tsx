@@ -7,10 +7,8 @@ import Styles from "./page.module.css";
 const Invite = () => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [showConfetti, setShowConfetti] = useState(true);
-  // const buttonRef = useRef<HTMLButtonElement>(null); // Create a ref for the button
 
   useEffect(() => {
-    // Function to update window size
     const detectSize = () => {
       setWindowSize({
         width: window.innerWidth,
@@ -18,13 +16,10 @@ const Invite = () => {
       });
     };
 
-    // Set initial size
     detectSize();
 
-    // Add resize event listener
     window.addEventListener("resize", detectSize);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("resize", detectSize);
     };
@@ -37,15 +32,6 @@ const Invite = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  // Automatically trigger button click on component mount
-  // useEffect(() => {
-  //   if (buttonRef.current) {
-  //     buttonRef.current.click(); // Simulate button click
-  //   }
-  // }, []);
-
-  // Function to play audio
 
   const handlePlayAudio = () => {
     const audio = document.getElementById(
@@ -60,16 +46,6 @@ const Invite = () => {
 
   return (
     <>
-      {/* Hidden button to start audio */}
-      {/* <button
-        ref={buttonRef}
-        onClick={handlePlayAudio}
-        style={{ display: "none" }}
-      >
-        Play Audio
-      </button> */}
-
-      {/* for confetti */}
       {showConfetti && (
         <Confetti
           width={windowSize.width}
@@ -80,7 +56,6 @@ const Invite = () => {
         />
       )}
 
-      {/* for audio clip */}
       <audio
         id="background-audio"
         src="/assets/sound.mp3" // Ensure this path is correct
@@ -91,7 +66,6 @@ const Invite = () => {
         Your browser does not support the <code>audio</code> element.
       </audio>
 
-      {/* for main or content part */}
       <main className={Styles.main}>
         <div className={Styles.content}>
           <h2 className={Styles.title}>Happy Teachers’ Day!</h2>
@@ -124,6 +98,46 @@ const Invite = () => {
           ></path>
         </svg>
       </main>
+      <div className="invite">
+        <div className={Styles.card}>
+          <div className={Styles.header}>
+            <h1 className={Styles.titles}>Invitation</h1>
+          </div>
+          <div className={Styles.body}>
+            <p className={Styles.message}>
+              The <strong>Computer Science Department</strong> of{" "}
+              <strong>Vivekananda Mahavidyalaya</strong> cordially invites all
+              the esteemed professors to celebrate{" "}
+              <strong>Teachers` Day</strong> with our students.
+            </p>
+            <p className={Styles.message}>
+              This day is an opportunity for us to express our deep appreciation
+              for your dedication, mentorship, and the invaluable knowledge you
+              impart. Your guidance has shaped the future of countless students,
+              and we wish to honor your commitment to excellence in education.
+            </p>
+            <p className={Styles.message}>
+              Let us come together to celebrate the bond between teachers and
+              students, and to reflect on the impact you`ve made in our academic
+              journey. Join us for a day of gratitude, reflection, and joy as we
+              pay tribute to the pillars of our institution.
+            </p>
+            <p className={Styles.details}>
+              <strong>Date:</strong> September 5, 2024 <br />
+              <strong>Time:</strong> 10:00 AM <br />
+              <strong>Venue:</strong> College Auditorium
+            </p>
+            <div className={Styles.footer}>
+              <p className={Styles.note}>
+                We look forward to your presence to make this day memorable for
+                everyone! Together, let`s celebrate the spirit of teaching and
+                learning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer></footer>
     </>
   );
 };

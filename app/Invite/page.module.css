@@ -1,73 +1,118 @@
 .main {
-    width: 100%;
-    height: 100vh;
-    background: url(./assets/logo.jpg) no-repeat center/cover;
-    opacity: 1; /* Background image opacity */
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Centers all text horizontally */
-  }
-  
-  .content {
-    background: transparent; /* Slightly transparent background for text content */
-    padding: 2rem;
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px transparent;
-    width: 80%;
-    height: 80%;
-    opacity: 1;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgb(0, 0, 0), 0 6px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    flex-wrap: wrap;
-  }
-  
-  .title {
-    font-family: "Dancing Script", cursive;
-    font-size: 2.5rem;
-    color: whitesmoke;
-    margin-bottom: 20px;
-  }
-  
-  .subtitle {
-    font-family: "Dancing Script", cursive;
-    font-size: 2rem;
-    color: whitesmoke;
-    margin-top: 20px;
-  }
-  
-  .imageWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 3px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Centers the image container */
-  }
-  
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-.mouse{
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/logo.jpg) no-repeat center/cover;
+  opacity: 0.9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  background:transparent;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 80%;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: #ffffff; /* White text color */
+  margin-top: 20px;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #ffffff; /* White border */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  margin: 20px auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.mouse {
   margin-top: 10px;
   margin-bottom: -10px;
-} 
+}
+
+.card {
+  width: 90%;
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #000000; /* Black background */
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Arial, sans-serif';
+}
+
+.header {
+  border-bottom: 2px solid #ffffff; /* White border */
+  padding-bottom: 10px;
+}
+
+.titles {
+  font-size: 24px;
+  color: #ffffff; /* White text color */
+  margin: 0;
+}
+
+.body {
+  padding: 20px 0;
+}
+
+.message {
+  font-size: 18px;
+  color: #cccccc; /* Light gray text color */
+  margin-bottom: 20px;
+}
+
+.details {
+  font-size: 16px;
+  color: #999999; /* Medium gray text color */
+  line-height: 1.5;
+}
+
+.footer {
+  border-top: 2px solid #ffffff; /* White border */
+  padding-top: 10px;
+}
+
+.note {
+  font-size: 14px;
+  color: #888888; /* Gray text color */
+}
