@@ -101,14 +101,14 @@ const Invite = () => {
       <div className="invite">
         <div className={Styles.card}>
           <div className={Styles.header}>
-            <h1 className={Styles.titles}>Invitation</h1>
+            <h1 className={Styles.titles}>INVITATION</h1>
           </div>
           <div className={Styles.body}>
             <p className={Styles.message}>
-              The <strong>Computer Science Department</strong> of{" "}
-              <strong>Vivekananda Mahavidyalaya</strong> cordially invites all
+              The <strong className={Styles.strong}>Computer Science Department</strong> of{" "}
+              <strong className={Styles.strong}>Vivekananda Mahavidyalaya</strong> cordially invites all
               the esteemed professors to celebrate{" "}
-              <strong>Teachers` Day</strong> with our students.
+              <strong className={Styles.strong}>Teachers` Day</strong> with our students.
             </p>
             <p className={Styles.message}>
               This day is an opportunity for us to express our deep appreciation
@@ -123,9 +123,9 @@ const Invite = () => {
               pay tribute to the pillars of our institution.
             </p>
             <p className={Styles.details}>
-              <strong>Date:</strong> September 5, 2024 <br />
-              <strong>Time:</strong> 11:00 AM <br />
-              <strong>Venue:</strong> Computer Science Dept
+              <strong className={Styles.strong}>Date:</strong> September 5, 2024 <br />
+              <strong className={Styles.strong}>Time:</strong> 11:00 AM <br />
+              <strong className={Styles.strong}>Venue:</strong> Computer Science Dept
             </p>
             <div className={Styles.footer}>
               <p className={Styles.note}>
