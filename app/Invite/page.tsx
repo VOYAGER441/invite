@@ -46,9 +46,11 @@ const Invite = () => {
   // }, []);
 
   // Function to play audio
-  
+
   const handlePlayAudio = () => {
-    const audio = document.getElementById("background-audio") as HTMLAudioElement;
+    const audio = document.getElementById(
+      "background-audio"
+    ) as HTMLAudioElement;
     if (audio) {
       audio.play().catch((error) => {
         console.log("Audio play was prevented:", error);
@@ -95,7 +97,7 @@ const Invite = () => {
           <h2 className={Styles.title}>Happy Teachers’ Day!</h2>
           <div className={Styles.imageWrapper}>
             <Image
-              src="/assets/logo.jpg" // Ensure this path is correct
+              src="/assets/logo.jpg"
               alt="Teachers' Day Logo"
               width={250}
               height={250}
@@ -103,7 +105,16 @@ const Invite = () => {
             />
           </div>
           <h2 className={Styles.subtitle}>Computer Science</h2>
-          <div id="guest-name" data-message="Kepada Yth Bapak/Ibu/Saudara/i"></div>
+          <div className="scroll">
+            <Image
+              src="/assets/scroll.png"
+              alt="Scroll Down"
+              width={50}
+              height={50}
+              className={Styles.mouse}
+            />
+          </div>
+          <h2 className={Styles.subtitle}>Scroll Down</h2>
         </div>
         <svg className={Styles.wave} viewBox="0 0 1440 320">
           <path
