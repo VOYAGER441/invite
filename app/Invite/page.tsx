@@ -5,21 +5,25 @@ import Image from "next/image";
 import Styles from "./page.module.css";
 
 const Invite = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [showConfetti, setShowConfetti] = useState(true);
 
-  const detectSize = () => {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  };
-
   useEffect(() => {
+    // Function to update window size
+    const detectSize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Set initial size
+    detectSize();
+
+    // Add resize event listener
     window.addEventListener("resize", detectSize);
+
+    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("resize", detectSize);
     };
