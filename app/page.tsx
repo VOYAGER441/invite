@@ -77,7 +77,7 @@ export default function Home() {
           align-items: center;
         }
         .font-esthetic {
-          font-family: "Dancing Script", cursive;
+          font-family: "Lobster",cursive;
           font-size: 2.5rem;
           margin-top: 20px;
         }
