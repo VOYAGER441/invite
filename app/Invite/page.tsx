@@ -124,8 +124,8 @@ const Invite = () => {
             </p>
             <p className={Styles.details}>
               <strong>Date:</strong> September 5, 2024 <br />
-              <strong>Time:</strong> 10:00 AM <br />
-              <strong>Venue:</strong> College Auditorium
+              <strong>Time:</strong> 11:00 AM <br />
+              <strong>Venue:</strong> Computer Science Dept
             </p>
             <div className={Styles.footer}>
               <p className={Styles.note}>
@@ -137,7 +137,9 @@ const Invite = () => {
           </div>
         </div>
       </div>
-      <footer></footer>
+      <footer className={Styles.copy}>
+      <p>© Copyright, Made By Voyager With ❤️</p>
+      </footer>
     </>
   );
 };
