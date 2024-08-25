@@ -7,6 +7,7 @@ import Styles from "./page.module.css";
 const Invite = () => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [showConfetti, setShowConfetti] = useState(true);
+  // const buttonRef = useRef<HTMLButtonElement>(null); // Create a ref for the button
 
   useEffect(() => {
     // Function to update window size
@@ -37,8 +38,36 @@ const Invite = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Automatically trigger button click on component mount
+  // useEffect(() => {
+  //   if (buttonRef.current) {
+  //     buttonRef.current.click(); // Simulate button click
+  //   }
+  // }, []);
+
+  // Function to play audio
+  
+  const handlePlayAudio = () => {
+    const audio = document.getElementById("background-audio") as HTMLAudioElement;
+    if (audio) {
+      audio.play().catch((error) => {
+        console.log("Audio play was prevented:", error);
+      });
+    }
+  };
+
   return (
     <>
+      {/* Hidden button to start audio */}
+      {/* <button
+        ref={buttonRef}
+        onClick={handlePlayAudio}
+        style={{ display: "none" }}
+      >
+        Play Audio
+      </button> */}
+
+      {/* for confetti */}
       {showConfetti && (
         <Confetti
           width={windowSize.width}
@@ -48,6 +77,19 @@ const Invite = () => {
           opacity={0.7}
         />
       )}
+
+      {/* for audio clip */}
+      <audio
+        id="background-audio"
+        src="/assets/sound.mp3" // Ensure this path is correct
+        loop
+        autoPlay
+        style={{ display: "none" }} // Hide the audio element
+      >
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+
+      {/* for main or content part */}
       <main className={Styles.main}>
         <div className={Styles.content}>
           <h2 className={Styles.title}>Happy Teachers’ Day!</h2>
